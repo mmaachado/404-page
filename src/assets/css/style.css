@@ -224,14 +224,71 @@ img {
     }
 }
 
-
 /*======== BREAKPOINTS ========*/
 
 /* for small devices */
+@media screen and (max-width: 320px) {
+    .home {
+        padding-top: 7rem;
+    }
+}
 
 /* for medium devices */
+@media screen and (min-width: 767px) {
+    .nav {
+        height: calc(var(--header-height) + 1.5rem);
+    }
+    .nav__toggle,
+    .nav__close {
+        display: none;
+    }
+    .nav__list {
+        flex-direction: row;
+        column-gap: 3.5rem;
+    }
+}
 
 /* for large devices */
+@media screen and (min-width: 1024px) {
+    .home__container {
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        column-gap: 2rem;
+    }
+    .home__data {
+        text-align: initial;
+    }
+    .home__img img {
+        width: 400px;
+    }
+    .home__shadow {
+        width: 250px;
+        height: 40px;
+    }
+}
+
+@media screen and (min-width: 1048px) {
+    .container {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 
 /* for 2k resolutions */
+@media screen and (min-width: 2048px) {
+    body {
+        zoom: 1.7;
+    }
 
+    .home {
+        height: initial;
+        row-gap: 4rem;
+    }
+}
+
+/* for 4k resolutions */
+@media screen and (min-width: 3840px) {
+    body {
+        zoom: 3.1;
+    }
+}
