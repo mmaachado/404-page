@@ -164,7 +164,66 @@ img {
     margin: .75rem 0;
 }
 
+.home__button {
+    margin-top: 2rem;
+    display: inline-block;
+    background-color: var(--text-color);
+    color: #fff;
+    padding: .80rem 1.5rem;
+    border-radius: 3rem;
+    transition: .4s;
+}
+
+.home__button:hover {
+    box-shadow: 0 4px 12px hsla(38, 69%, 8%, .2);
+}
+
+.home__img img {
+    width: 230px;
+    animation: floaty 1.8s infinite alternate;
+}
+
+.home__img {
+    justify-self: center;
+}
+
+.home__shadow {
+    width: 130px;
+    height: 24px;
+    background-color: hsl(38, 21%, 19%, .16);
+    margin: 0 auto;
+    border-radius: 50%;
+    filter: blur(7px);
+    animation: shadow 1.8s infinite alternate;
+}
+
+.home__footer {
+    display: flex;
+    justify-content: center;
+    column-gap: .5rem;
+    font-size: var(--smaller-font-size);
+    align-self: flex-end;
+}
+
 /* animate ghost */
+@keyframes floaty {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(15px);
+    }
+}
+
+@keyframes shadow {
+    0% {
+        transform: scale(1, 1);
+    }
+    100% {
+        transform: scale(.85, .85);
+    }
+}
+
 
 /*======== BREAKPOINTS ========*/
 
